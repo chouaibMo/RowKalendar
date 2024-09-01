@@ -5,5 +5,5 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun RowCalendar() {
-    Text("Hello from RowCalendar")
+    Text("Hello from RowCalendar 0.0.4")
 }

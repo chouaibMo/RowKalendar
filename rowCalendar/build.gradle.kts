@@ -7,7 +7,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.compose)
-    id("com.vanniktech.maven.publish") version "0.29.0"
+    alias(libs.plugins.mavenPublish)
 }
 
 kotlin {
@@ -21,7 +21,7 @@ kotlin {
 
     listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach {
         it.binaries.framework {
-            baseName = "mywesomelib"
+            baseName = "RowCalendar"
             isStatic = true
         }
     }
@@ -55,12 +55,16 @@ android {
 
 
 mavenPublishing {
-    coordinates(artifactId = "row-calendar", groupId = "io.github.chouaibmo", version = "0.0.3")
+    coordinates(
+        artifactId = "row-calendar",
+        groupId = "io.github.chouaibmo",
+        version = "0.0.4"
+    )
 
     pom{
         name.set("RowCalendar")
         description.set("A Compose Multiplatform library to display horizontal calendar")
-        url.set("https://github.com/chouaibmo/RowCalendar")
+        url.set("https://github.com/chouaibMo/RowCalendar")
         inceptionYear.set("2024")
 
         licenses {
@@ -75,16 +79,18 @@ mavenPublishing {
             developer {
                 id.set("chouaibMo")
                 name.set("Chouaib")
-                url.set("https://github.com/chouaibmo")
+                url.set("https://github.com/chouaibMo")
             }
         }
 
         scm {
-            connection.set("https://github.com/chouaibmo/RowCalendar.git")
+            connection.set("https://github.com/chouaibMo/RowCalendar.git")
+            developerConnection.set("https://github.com/chouaibMo/RowCalendar.git")
+            url.set("https://github.com/chouaibMo/RowCalendar.git")
         }
     }
 
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-    //signAllPublications()
+    signAllPublications()
 
 }
