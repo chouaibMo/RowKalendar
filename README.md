@@ -21,7 +21,6 @@ To integrate RowCalendar into your project, add the following dependencies to th
 
 ```kotlin
 commonMain.dependencies {
-    // Other dependencies ...
     implementation("io.github.chouaibmo:row-calendar:<latest_version>")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:<latest_version>")
 }
@@ -35,8 +34,8 @@ commonMain.dependencies {
 The following code snippet shows how to use the `RowCalendar` composable to display a simple row calendar 
 by making use of the `DayCell` composable provided by the library to display each day in the calendar.
 ```kotlin
-import io.chouaibmo.horizontalcalendar.RowCalendar
-import io.chouaibmo.horizontalcalendar.components.DayCell
+import io.github.chouaibmo.horizontalcalendar.RowCalendar
+import io.github.chouaibmo.horizontalcalendar.components.DayCell
 
 @Composable
 fun RowCalendarSample() {
@@ -60,7 +59,7 @@ fun RowCalendarSample() {
 If you prefer a more tailored approach that better aligns with your app's design and user experience, 
 you can provide your own composable as shown in the following code snippet:
 ```kotlin
-import io.chouaibmo.horizontalcalendar.RowCalendar
+import io.github.chouaibmo.horizontalcalendar.RowCalendar
 
 @Composable
 fun RowCalendarSample() {
