@@ -35,13 +35,11 @@ kotlin {
                 implementation(compose.material3)
                 implementation(compose.components.resources)
                 implementation(compose.components.uiToolingPreview)
+                implementation(libs.lifecycle.viewmodel.compose)
+                implementation(libs.kotlinx.datetime)
+
             }
         }
-//        val commonTest by getting {
-//            dependencies {
-//                implementation(libs.kotlin.test)
-//            }
-//        }
     }
 }
 
