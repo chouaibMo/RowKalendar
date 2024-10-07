@@ -2,7 +2,7 @@
   <img src="./screenshots/cover.jpg" alt="cover">
 </p>
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.chouaibmo/row-calendar.svg?color=blue)](https://search.maven.org/artifact/io.github.chouaibmo/row-calendar)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.chouaibmo/rowkalendar.svg?color=blue)](https://search.maven.org/artifact/io.github.chouaibmo/rowkalendar)
 ## 💡 Description
 
 RowKalendar is a Compose Multiplatform library designed to offer a straightforward and user-friendly 
