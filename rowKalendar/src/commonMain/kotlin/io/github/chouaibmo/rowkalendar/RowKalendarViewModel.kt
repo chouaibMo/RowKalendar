@@ -15,7 +15,7 @@ import kotlinx.datetime.plus
 private const val DAYS_TO_LOAD = 30
 private const val MAX_DAYS_TO_LOAD = 365
 
-class RowKalendarViewModel : ViewModel() {
+internal class RowKalendarViewModel : ViewModel() {
 
     val uiState: MutableState<RowKalendarUiModel> = mutableStateOf(RowKalendarUiModel())
 
