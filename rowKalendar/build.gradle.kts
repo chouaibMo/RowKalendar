@@ -56,7 +56,7 @@ mavenPublishing {
     coordinates(
         artifactId = "rowkalendar",
         groupId = "io.github.chouaibmo",
-        version = "0.0.1"
+        version = "0.0.2"
     )
 
     pom{
