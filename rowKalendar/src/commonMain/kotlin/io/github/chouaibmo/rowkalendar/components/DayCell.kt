@@ -1,4 +1,4 @@
-package io.github.chouaibmo.rowcalendar.components
+package io.github.chouaibmo.rowkalendar.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import io.github.chouaibmo.rowcalendar.extensions.isBefore
-import io.github.chouaibmo.rowcalendar.extensions.now
+import io.github.chouaibmo.rowkalendar.extensions.isBefore
+import io.github.chouaibmo.rowkalendar.extensions.now
 import kotlinx.datetime.LocalDate
 
 /**

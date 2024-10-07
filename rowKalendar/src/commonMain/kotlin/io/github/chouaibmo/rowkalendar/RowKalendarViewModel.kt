@@ -1,10 +1,10 @@
-package io.github.chouaibmo.rowcalendar
+package io.github.chouaibmo.rowkalendar
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import io.github.chouaibmo.rowcalendar.extensions.now
+import io.github.chouaibmo.rowkalendar.extensions.now
 import kotlinx.coroutines.launch
 import kotlinx.datetime.DatePeriod
 import kotlinx.datetime.LocalDate
@@ -15,9 +15,9 @@ import kotlinx.datetime.plus
 private const val DAYS_TO_LOAD = 30
 private const val MAX_DAYS_TO_LOAD = 365
 
-class RowCalendarViewModel : ViewModel() {
+class RowKalendarViewModel : ViewModel() {
 
-    val uiState: MutableState<RowCalendarUiModel> = mutableStateOf(RowCalendarUiModel())
+    val uiState: MutableState<RowKalendarUiModel> = mutableStateOf(RowKalendarUiModel())
 
     // Manage load boundaries and limit
     private var isBounded: Boolean = true

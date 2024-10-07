@@ -21,7 +21,7 @@ kotlin {
 
     listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach {
         it.binaries.framework {
-            baseName = "RowCalendar"
+            baseName = "RowKalendar"
             isStatic = true
         }
     }
@@ -54,15 +54,15 @@ android {
 
 mavenPublishing {
     coordinates(
-        artifactId = "row-calendar",
+        artifactId = "rowkalendar",
         groupId = "io.github.chouaibmo",
-        version = "0.0.5"
+        version = "0.0.1"
     )
 
     pom{
-        name.set("RowCalendar")
-        description.set("A Compose Multiplatform library to display horizontal calendar")
-        url.set("https://github.com/chouaibMo/RowCalendar")
+        name.set("RowKalendar")
+        description.set("A Compose Multiplatform library to display horizontal scrollable calendars")
+        url.set("https://github.com/chouaibMo/RowKalendar")
         inceptionYear.set("2024")
 
         licenses {
@@ -82,9 +82,9 @@ mavenPublishing {
         }
 
         scm {
-            connection.set("https://github.com/chouaibMo/RowCalendar.git")
-            developerConnection.set("https://github.com/chouaibMo/RowCalendar.git")
-            url.set("https://github.com/chouaibMo/RowCalendar.git")
+            connection.set("https://github.com/chouaibMo/RowKalendar.git")
+            developerConnection.set("https://github.com/chouaibMo/RowKalendar.git")
+            url.set("https://github.com/chouaibMo/RowKalendar.git")
         }
     }
 

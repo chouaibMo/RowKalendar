@@ -1,4 +1,4 @@
-package io.github.chouaibmo.rowcalendar
+package io.github.chouaibmo.rowkalendar
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.LazyRow
@@ -19,13 +19,13 @@ import kotlinx.datetime.LocalDate
  * @param content composable that will be called for each date in the calendar. It takes the date, a boolean to indicate if the date is selected and a callback to be called when the date is clicked.
  */
 @Composable
-fun RowCalendar(
+fun RowKalendar(
     modifier: Modifier = Modifier,
     isBounded: Boolean = true,
     maxDays: Int = 365,
     content: @Composable (date: LocalDate, isSelected: Boolean, onClick: (LocalDate) -> Unit) -> Unit
 ) {
-    val viewModel: RowCalendarViewModel = viewModel()
+    val viewModel: RowKalendarViewModel = viewModel()
     val uiState = viewModel.uiState.value
     val scrollState = rememberLazyListState(
         initialFirstVisibleItemIndex = (uiState.dates.size / 2) - 1,

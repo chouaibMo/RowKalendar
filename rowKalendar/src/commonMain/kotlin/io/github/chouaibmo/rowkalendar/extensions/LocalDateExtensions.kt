@@ -1,4 +1,4 @@
-package io.github.chouaibmo.rowcalendar.extensions
+package io.github.chouaibmo.rowkalendar.extensions
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDate

@@ -16,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RowCalendar"
-include(":rowCalendar")
+rootProject.name = "RowKalendar"
+include(":rowKalendar")
