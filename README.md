@@ -10,10 +10,6 @@ scrollable horizontal calendar component for both Android and iOS platforms.
 
 ## 📱 Supported platforms
 this project supports the following platforms:
-* Android
-* iOS
-
-## 📱 Supported Platforms
 
 | Platform      | Android |   iOS   | Desktop | Browser |
 |---------------|:-------:|:-------:|:-------:|:-------:|
