@@ -133,8 +133,8 @@ fun RowKalendarSample() {
 
 ## Videos
 <p>
-  <img src="./screenshots/video_1.mp4" width="50%" alt="video_1">
-  <img src="./screenshots/video_2.mp4" width="50%" alt="video_2">
+  <img src="./screenshots/video_1.gif" width="32%" alt="video_1">
+  <img src="./screenshots/video_2.gif" width="32%" alt="video_2">
 
 
 ## 🤝 Contribution
