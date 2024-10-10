@@ -1,5 +1,5 @@
 <p> 
-  <img src="./screenshots/cover.jpg" alt="cover">
+  <img src="./screenshots/cover.png" alt="cover">
 </p>
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.chouaibmo/rowkalendar.svg?color=blue)](https://search.maven.org/artifact/io.github.chouaibmo/rowkalendar)
@@ -126,10 +126,15 @@ fun RowKalendarSample() {
 
 ## 📸 Screenshots
 <p>
-  <img src="./screenshots/screenshot1.png" width="32%" alt="screenshot1">
-  <img src="./screenshots/screenshot2.png" width="32%" alt="screenshot2">
-  <img src="./screenshots/screenshot3.png" width="32%" alt="screenshot3">
+  <img src="./screenshots/screenshot_1.png" width="32%" alt="screenshot_1">
+  <img src="./screenshots/screenshot_2.png" width="32%" alt="screenshot_2">
+  <img src="./screenshots/screenshot_3.png" width="32%" alt="screenshot_3">
 </p>
+
+## Videos
+<p>
+  <img src="./screenshots/video_1.mp4" width="50%" alt="video_1">
+  <img src="./screenshots/video_2.mp4" width="50%" alt="video_2">
 
 
 ## 🤝 Contribution
