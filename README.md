@@ -28,8 +28,8 @@ Please note that the library is under active development, and some features may 
 
 ## Videos
 <p>
-  <img src="./screenshots/video_2.gif" width="32%" alt="video_2">
   <img src="./screenshots/video_1.gif" width="32%" alt="video_1">
+  <img src="./screenshots/video_2.gif" width="32%" alt="video_2">
   <img src="./screenshots/video_3.gif" width="32%" alt="video_3">
 
 ## ⚙️ Setup
