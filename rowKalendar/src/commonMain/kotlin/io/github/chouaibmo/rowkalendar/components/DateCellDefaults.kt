@@ -53,9 +53,15 @@ object DateCellDefaults {
         )
     }
 
-    fun elevation(defaultElevation: Dp = 0.dp): DateCellElevation {
+    fun elevation(
+        selectedElevation: Dp = 0.dp,
+        pastElevation: Dp = 0.dp,
+        futureElevation: Dp = 0.dp
+    ): DateCellElevation {
         return DateCellElevation(
-            defaultElevation = defaultElevation,
+            selectedElevation = selectedElevation,
+            pastElevation = pastElevation,
+            futureElevation = futureElevation
         )
     }
 
@@ -126,8 +132,23 @@ object DateCellDefaults {
 
     /**
      * Represents the elevation used in the DateCell.
+     * Handles the elevation for the selected, past and future states of the DateCell.
      */
-    data class DateCellElevation(
-        val defaultElevation: Dp
-    )
+    class DateCellElevation(
+        val selectedElevation: Dp,
+        val pastElevation: Dp,
+        val futureElevation: Dp,
+    ) {
+        fun copy(
+            selectedElevation: Dp = this.selectedElevation,
+            pastElevation: Dp = this.pastElevation,
+            futureElevation: Dp = this.futureElevation
+        ): DateCellElevation {
+            return DateCellElevation(
+                selectedElevation = selectedElevation.takeOrElse { this.selectedElevation },
+                pastElevation = pastElevation.takeOrElse { this.pastElevation },
+                futureElevation = futureElevation.takeOrElse { this.futureElevation }
+            )
+        }
+    }
 }

@@ -5,17 +5,20 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import io.github.chouaibmo.rowkalendar.extensions.isBefore
 import io.github.chouaibmo.rowkalendar.extensions.now
 import kotlinx.datetime.LocalDate
@@ -63,27 +66,38 @@ fun DateCell(
         }
     }
 
+    val cellElevation = when {
+        isSelected -> elevation.selectedElevation
+        date.isBefore(LocalDate.now()) -> elevation.pastElevation
+        else -> elevation.futureElevation
+    }
+
     Card(
-        modifier = modifier.clickable { onDateSelected(date) },
-        shape = shape,
+        modifier = modifier
+            .shadow(elevation = cellElevation, shape = shape)
+            .clip(shape = shape)
+            .clickable { onDateSelected(date) },
         border = cellBorder,
         colors = CardDefaults.cardColors(containerColor = cellColor),
-        elevation = CardDefaults.cardElevation(defaultElevation = elevation.defaultElevation)
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
         ) {
             Text(
-                text = date.dayOfWeek.name.subSequence(0, 3).toString().uppercase(),
-                color = textColor
+                text = date.dayOfWeek.name.subSequence(0, 3).toString()
+                    .lowercase()
+                    .replaceFirstChar { it.uppercase() },
+                color = textColor,
+                fontWeight = FontWeight.Bold,
             )
             Spacer(modifier = Modifier.height(6.dp))
             Text(
                 text = date.dayOfMonth.toString(),
-                fontWeight = FontWeight.ExtraBold,
-                color = textColor
+                fontWeight = FontWeight.Black,
+                color = textColor,
+                fontSize = 24.sp
             )
         }
     }

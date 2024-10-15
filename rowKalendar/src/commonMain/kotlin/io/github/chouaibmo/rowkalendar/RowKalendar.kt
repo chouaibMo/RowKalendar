@@ -25,7 +25,7 @@ fun RowKalendar(
     maxDays: Int = 365,
     content: @Composable (date: LocalDate, isSelected: Boolean, onClick: (LocalDate) -> Unit) -> Unit
 ) {
-    val viewModel: RowKalendarViewModel = viewModel()
+    val viewModel: RowKalendarViewModel = viewModel { RowKalendarViewModel() }
     val uiState = viewModel.uiState.value
     val scrollState = rememberLazyListState(
         initialFirstVisibleItemIndex = (uiState.dates.size / 2) - 1,
@@ -38,7 +38,7 @@ fun RowKalendar(
     LazyRow(
         state = scrollState,
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         itemsIndexed(uiState.dates) { index, date ->
 
