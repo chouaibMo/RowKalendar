@@ -1,8 +1,9 @@
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.chouaibmo/rowkalendar.svg?color=blue)](https://search.maven.org/artifact/io.github.chouaibmo/rowkalendar)
+
 <p> 
   <img src="./screenshots/cover.png" alt="cover">
 </p>
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.chouaibmo/rowkalendar.svg?color=blue)](https://search.maven.org/artifact/io.github.chouaibmo/rowkalendar)
 ## 💡 Description
 
 RowKalendar is a Compose Multiplatform library designed to offer a straightforward and user-friendly
@@ -15,10 +16,21 @@ this project supports the following platforms:
 |---------------|:-------:|:-------:|:-------:|:-------:|
 | Supported     |   ✅    |   ✅    |    🚫   |   🚫    |
 
-
-
 ⏳ Support for Browser and Desktop (Linux, macOS, Windows) is planned for future releases.
 Please note that the library is under active development, and some features may not be available across all platforms.
+
+## 📸 Screenshots
+<p>
+  <img src="./screenshots/screenshot_1.png" width="32%" alt="screenshot_1">
+  <img src="./screenshots/screenshot_2.png" width="32%" alt="screenshot_2">
+  <img src="./screenshots/screenshot_3.png" width="32%" alt="screenshot_3">
+</p>
+
+## Videos
+<p>
+  <img src="./screenshots/video_2.gif" width="32%" alt="video_2">
+  <img src="./screenshots/video_1.gif" width="32%" alt="video_1">
+  <img src="./screenshots/video_3.gif" width="32%" alt="video_3">
 
 ## ⚙️ Setup
 To integrate RowKalendar into your project, add the following dependencies to the commonMain source set of your shared module:
@@ -76,20 +88,23 @@ import io.github.chouaibmo.rowkalendar.components.DateCell
 @Composable
 fun RowKalendarSample() {
     RowKalendar(
-        modifier = Modifier.height(100.dp),
+        modifier = Modifier.fillMaxWidth(),
         content = { date, isSelected, onClick ->
             DateCell(
                 date = date,
                 isSelected = isSelected,
                 onClick = onClick,
-                modifier = Modifier.padding(6.dp),
-                shape = RoundedCornerShape(8.dp),
-                elevation = DateCellDefaults.DateCellElevation(6.dp),
+                shape = RoundedCornerShape(12.dp),
+                elevation = DateCellDefaults.DateCellElevation(
+                    selectedElevation = 4.dp,
+                    pastElevation = 2.dp,
+                    futureElevation = 2.dp
+                ),
                 border = DateCellDefaults.border(
-                    selectedBorderColor = MaterialTheme.colorScheme.primaryContainer,
+                    selectedBorderColor = Color.LightGray,
                     pastBorderColor = Color.LightGray,
-                    futureBorderColor = Color.DarkGray,
-                    selectedBorderWidth = 2.dp,
+                    futureBorderColor = Color.LightGray,
+                    selectedBorderWidth = 1.dp,
                     pastBorderWidth = 1.dp,
                     futureBorderWidth = 1.dp
                 ),
@@ -116,26 +131,13 @@ import io.github.chouaibmo.rowkalendar.RowKalendar
 @Composable
 fun RowKalendarSample() {
     RowKalendar(
-        modifier = Modifier.height(100.dp),
+        modifier = Modifier.fillMaxWidth(),
         content = { date, isSelected, onClick ->
             // Your own custom composable
         }
     )
 }
 ```
-
-## 📸 Screenshots
-<p>
-  <img src="./screenshots/screenshot_1.png" width="32%" alt="screenshot_1">
-  <img src="./screenshots/screenshot_2.png" width="32%" alt="screenshot_2">
-  <img src="./screenshots/screenshot_3.png" width="32%" alt="screenshot_3">
-</p>
-
-## Videos
-<p>
-  <img src="./screenshots/video_1.gif" width="32%" alt="video_1">
-  <img src="./screenshots/video_2.gif" width="32%" alt="video_2">
-
 
 ## 🤝 Contribution
 
